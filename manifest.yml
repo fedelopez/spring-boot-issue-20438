@@ -1,0 +1,11 @@
+---
+applications:
+  - name: bootiful-orders
+    memory: 1024M
+    instances: 1
+    path: build/libs/demo-0.0.1-SNAPSHOT.jar
+    buildpack: java_buildpack
+    services:
+      - bootiful-orders-db
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{jre: {version: 11.+}}'
